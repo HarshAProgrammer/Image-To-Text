@@ -1,4 +1,4 @@
-package com.example.imagetotext.adapters;
+package com.example.imagetotext;
 
 
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+
+import java.util.List;
 
 public class IntroViewPagerAdapter extends PagerAdapter {
 
@@ -62,4 +64,3 @@ public class IntroViewPagerAdapter extends PagerAdapter {
 
     }
 }
-

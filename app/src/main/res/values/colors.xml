@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorIntro1">#EFD7A9</color>
+    <color name="colorIntro2">#816A58</color>
+    <color name="colorIntro3">#B7B8BA</color>
+    <color name="colorIntro4">#D5D3D3</color>
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+    <color name="tab_indicator_gray">#c0c0c0</color>
+
 </resources>

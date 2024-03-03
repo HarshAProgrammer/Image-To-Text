@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ImageToText</string>
+
+
+    <string name="skip_intro">Skip</string>
+    <string name="get_started_intro">Get Started</string>
+    <string name="next_intro">Next</string>
+    <string name="heading_intro">Heading</string>
+    <string name="description_intro">Description</string>
+    <string name="image_introduction_intro">Image Introduction</string>
 </resources>

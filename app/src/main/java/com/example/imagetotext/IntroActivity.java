@@ -17,6 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class IntroActivity extends AppCompatActivity {
@@ -38,25 +39,6 @@ public class IntroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (getIntent().getExtras() != null) {
-            if (getIntent().hasExtra("Video")) {
-                Intent intent = new Intent(this, VideoCheckerActivity.class);
-                startActivity(intent);
-                finish();
-            }if (getIntent().hasExtra("Expensive")) {
-                Intent intent = new Intent(this, ExpensiveCheckerActivity.class);
-                startActivity(intent);
-                finish();
-            }if (getIntent().hasExtra("Blog")) {
-                Intent intent = new Intent(this, BlogCheckerActivity.class);
-                startActivity(intent);
-                finish();
-            }if (getIntent().hasExtra("Daily")) {
-                Intent intent = new Intent(this, DailyLoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }
 
 
         setContentView(R.layout.activity_intro);
@@ -73,11 +55,10 @@ public class IntroActivity extends AppCompatActivity {
 
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Watches","Discover wide range of watches",R.drawable.watches_intro));
-        mList.add(new ScreenItem("Video Library","Watch our video library, showcasing lots of display videos.",R.drawable.video_intro));
-        mList.add(new ScreenItem("Facts","Know Interesting Facts",R.drawable.facts_intro));
-        mList.add(new ScreenItem("Why we are at the top","Recognize our core values",R.drawable.enterprise_intro));
-        mList.add(new ScreenItem("Blogs","Read Blogs from TopNotch Editors",R.drawable.img_blog_checker));
+        mList.add(new ScreenItem("Welcome to ImageText!","Scan images for text effortlessly.",R.drawable.intro1));
+        mList.add(new ScreenItem("Scan Anytime, Anywhere","Capture text from images on the go.",R.drawable.intro2));
+        mList.add(new ScreenItem("Instant Text Recognition","Get accurate text from your images instantly.",R.drawable.intro3));
+        mList.add(new ScreenItem("Explore the Possibilities","Unlock the power of image-to-text conversion.",R.drawable.intro4));
 
         screenPager = findViewById(R.id.vpScreenIntro);
         final IntroViewPagerAdapter introViewPagerAdapter = new IntroViewPagerAdapter(this, mList);
@@ -87,8 +68,7 @@ public class IntroActivity extends AppCompatActivity {
                 getResources().getColor(R.color.colorIntro1),
                 getResources().getColor(R.color.colorIntro2),
                 getResources().getColor(R.color.colorIntro3),
-                getResources().getColor(R.color.colorIntro4),
-                getResources().getColor(R.color.colorIntro5)
+                getResources().getColor(R.color.colorIntro4)
         };
         screenPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -167,7 +147,7 @@ public class IntroActivity extends AppCompatActivity {
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openLORFromIntro = new Intent(getApplicationContext(), LoginOrRegisterActivity.class);
+                Intent openLORFromIntro = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(openLORFromIntro);
                 savePrefsData();
                 finish();
