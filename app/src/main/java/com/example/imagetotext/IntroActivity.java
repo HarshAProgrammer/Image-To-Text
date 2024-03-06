@@ -40,7 +40,12 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
+        if (restorePrefData()) {
 
+            Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(mainActivity);
+            finish();
+        }
         setContentView(R.layout.activity_intro);
 
 

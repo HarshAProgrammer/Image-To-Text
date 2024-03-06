@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/conLayIntro"
     android:layout_height="match_parent"
-    tools:context=".activities.IntroActivity"
+    tools:context=".IntroActivity"
 
     >
 
