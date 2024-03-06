@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/cameraAnim"
+        android:id="@+id/oopsAnim"
         android:layout_width="0dp"
         android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/camera_anim" />
+        app:lottie_rawRes="@raw/oops_anim" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

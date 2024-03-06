@@ -27,25 +27,53 @@ class MainActivity : AppCompatActivity() {
 
 
             }else{
-                Toast.makeText(this,"Something went Wrong!",Toast.LENGTH_SHORT).show()
+                setOopsDialogue()
             }
 
         }
         erase.setOnClickListener{
+            setDeleteDialogue()
 
         }
         copy.setOnClickListener{
-
+            setCopyDialogue()
         }
 
     }
     private fun setCameraDialogue() {
         val cameraDialogue = CameraDialogue(this@MainActivity)
-        cameraDialogue.startExpensiveDialogue()
+        cameraDialogue.startCameraDialogue()
         val handler = Handler()
         val TRANSITION_SCREEN_TIME = 1500
         handler.postDelayed({
             cameraDialogue.dismissDialogue()
+        }, TRANSITION_SCREEN_TIME.toLong())
+    }
+    private fun setOopsDialogue() {
+        val oopsDialogue = OopsDialogue(this@MainActivity)
+        oopsDialogue.startOopsDialogue()
+        val handler = Handler()
+        val TRANSITION_SCREEN_TIME = 1500
+        handler.postDelayed({
+            oopsDialogue.dismissDialogue()
+        }, TRANSITION_SCREEN_TIME.toLong())
+    }
+    private fun setDeleteDialogue() {
+        val deleteDialogue = DeleteDialogue(this@MainActivity)
+        deleteDialogue.startDeleteDialogue()
+        val handler = Handler()
+        val TRANSITION_SCREEN_TIME = 1500
+        handler.postDelayed({
+            deleteDialogue.dismissDialogue()
+        }, TRANSITION_SCREEN_TIME.toLong())
+    }
+    private fun setCopyDialogue() {
+        val copyDialogue = CopyDialogue(this@MainActivity)
+        copyDialogue.startCopyDialogue()
+        val handler = Handler()
+        val TRANSITION_SCREEN_TIME = 1500
+        handler.postDelayed({
+            copyDialogue.dismissDialogue()
         }, TRANSITION_SCREEN_TIME.toLong())
     }
 

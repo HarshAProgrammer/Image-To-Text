@@ -4,20 +4,21 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
 
-public class CameraDialogue {
+public class DeleteDialogue {
+
     private AlertDialog dialogue;
     private final Activity activity;
 
-    CameraDialogue(Activity myActivity){
+    DeleteDialogue(Activity myActivity){
         activity = myActivity;
     }
 
-    void startCameraDialogue(){
+    void startDeleteDialogue(){
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
         LayoutInflater inflater = activity.getLayoutInflater();
 
-        builder.setView(inflater.inflate(R.layout.camera_dialogue, null));
+        builder.setView(inflater.inflate(R.layout.delete_dialogue, null));
         builder.setCancelable(true);
 
 
