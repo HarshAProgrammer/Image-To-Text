@@ -87,23 +87,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <TextView
+        <EditText
+            android:id="@+id/tvResult"
             android:gravity="center"
+            android:text="The Text will be shown here"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </androidx.cardview.widget.CardView>
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/animation_camera"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:lottie_rawRes="@raw/camera_anim"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
